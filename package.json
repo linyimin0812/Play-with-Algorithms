@@ -3,6 +3,9 @@
     "blue-tape": "^1.0.0",
     "brolog": "^1.8.1"
   },
+  "scripts": {
+    "lint": "tslint --project tsconfig.json && tsc --noEmit"
+  },
   "devDependencies": {
     "@types/blue-tape": "^0.1.32"
   }
