@@ -6,7 +6,7 @@ export class SortTestHelper {
    * @param rangeL The minimum value
    * @param rangeR The maximum value
    */
-  static generateRandomArray (n: number, rangeL: number, rangeR: number): number[] {
+  public static generateRandomArray (n: number, rangeL: number, rangeR: number): number[] {
     if (rangeL > rangeR) {
       throw new Error('rangeL should be less than rangeR')
     }
@@ -22,7 +22,7 @@ export class SortTestHelper {
    * The order is from small to large
    * @param arr The tested array
    */
-  static isSorted(arr: number[]): boolean {
+  public static isSorted (arr: number[]): boolean {
     for (let i = 1; i < arr.length; i++) {
       if (arr[i] < arr[i - 1]) {
         return false
@@ -37,14 +37,14 @@ export class SortTestHelper {
    * @param sort Sort funtion
    * @param arr The sorted array
    */
-  static testComplexity(sortName: string, sort: (data: number[]) => void, arr: number[]) {
+  public static testComplexity (sortName: string, sort: (data: number[]) => void, arr: number[]) {
     const start = Date.now()
     sort(arr)
-    const end = Date.now()
+    const end       = Date.now()
     const isOrdered = this.isSorted(arr)
     if (! isOrdered) {
       throw new Error('The array is not in order')
     }
-    log.info('SortTestHelper', `${sortName} spend %s s`, (end -start) / 1000)
+    log.info('SortTestHelper', `${sortName} spend %s s`, (end - start) / 1000)
   }
 }

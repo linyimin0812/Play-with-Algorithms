@@ -26,8 +26,8 @@ test('isSorted', async t => {
 })
 
 test('isSorted', async t => {
-  const arr: number[] = [5, 2, 1, 4, 5]
+  const arr: number[]     = [5, 2, 1, 4, 5]
   const EXPECTED: boolean = false
-  const result: boolean = SortTestHelper.isSorted(arr)
+  const result: boolean   = SortTestHelper.isSorted(arr)
   t.equal(result, EXPECTED, 'The arr should not be sorted')
 })
