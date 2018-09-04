@@ -1,3 +1,4 @@
+import { log } from 'brolog'
 export class SortTestHelper {
   /**
    * Generate a random array which contains n elements, elements range from rangeL to rangeR
@@ -18,6 +19,7 @@ export class SortTestHelper {
 
   /**
    * Judge the target array whether is in order
+   * The order is from small to large
    * @param arr The tested array
    */
   static isSorted(arr: number[]): boolean {
@@ -30,11 +32,19 @@ export class SortTestHelper {
   }
 
   /**
-   * 
+   * To calculate the time required for sorting
    * @param sortName The name of sort function
    * @param sort Sort funtion
    * @param arr The sorted array
    */
   static testComplexity(sortName: string, sort: (data: number[]) => void, arr: number[]) {
+    const start = Date.now()
+    sort(arr)
+    const end = Date.now()
+    const isOrdered = this.isSorted(arr)
+    if (! isOrdered) {
+      throw new Error('The array is not in order')
+    }
+    log.info('SortTestHelper', `${sortName} spend %s s`, (end -start) / 1000)
   }
 }
