@@ -11,7 +11,7 @@ export class SortTestHelper {
     }
     const arr = new Array(n)
     for (let i = 0; i < n; i++) {
-      arr[i] = (Math.random() * Number.MAX_VALUE) % (rangeR - rangeL + 1) + rangeL
+      arr[i] = Math.floor((Math.random() * (rangeR - rangeL + 1))) + rangeL
     }
     return arr
   }
@@ -29,6 +29,12 @@ export class SortTestHelper {
     return true
   }
 
+  /**
+   * 
+   * @param sortName The name of sort function
+   * @param sort Sort funtion
+   * @param arr The sorted array
+   */
   static testComplexity(sortName: string, sort: (data: number[]) => void, arr: number[]) {
   }
 }
