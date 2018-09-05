@@ -3,4 +3,4 @@
 
 ## 目录
 
-[选择排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/selection-sort.md)
+[选择排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/selection-sort.md)
