@@ -18,6 +18,27 @@ export class SortTestHelper {
   }
 
   /**
+   * To generate a nearly order array
+   * @param n The number of random array element
+   * @param swapTime The times want to swap, The smaller value of swapTime, the more order the array is
+   */
+  public static generateRandomNearlyOrderedArray (n: number, swapTime: number): number[] {
+    const arr: number[] = new Array(n)
+    for (let i = 0; i < n; i++) {
+      arr[i] = i
+    }
+    for (let i = 0; i < swapTime; i++) {
+      const x: number = Math.floor(Math.random() * n)
+      const y: number = Math.floor(Math.random() * n)
+
+      const temp: number = arr[x]
+      arr  [x]           = arr[y]
+      arr  [y]           = temp
+    }
+    return arr
+  }
+
+  /**
    * Judge the target array whether is in order
    * The order is from small to large
    * @param arr The tested array

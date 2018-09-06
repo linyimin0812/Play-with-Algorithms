@@ -31,3 +31,10 @@ test('isSorted', async t => {
   const result: boolean   = SortTestHelper.isSorted(arr)
   t.equal(result, EXPECTED, 'The arr should not be sorted')
 })
+
+test('generateRandomNearlyOrderedArray', async t => {
+  const arr: number[] = SortTestHelper.generateRandomNearlyOrderedArray(10, 0)
+  const EXPECTED: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  t.deepEqual(arr, EXPECTED, 'generateRandomNearlyOrderedArray generate a ordered array')
+})
