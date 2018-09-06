@@ -29,3 +29,7 @@ function selectionSort (arr: number[]): void {
   }
 }
 ```
+
+特点:
+
+对于任意一个数组,两层循环中每层循环都必须完成,时间复杂度(O(N * N))
