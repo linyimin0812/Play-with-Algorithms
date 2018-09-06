@@ -4,3 +4,5 @@
 ## 目录
 
 [选择排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/selection-sort.md)
+
+[插入排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/insertion-sort.md)

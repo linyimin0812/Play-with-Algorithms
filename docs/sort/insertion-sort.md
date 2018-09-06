@@ -60,4 +60,10 @@ function insertionSortOptimization (arr: number[]) {
 
 性能比较:
 
+- 大量交换操作和优化之后没有交换的排序性能比较
+
 ![交换与不交换的性能比较](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlqoa62n0000qjkhqspp45zr.png)
+
+- 插入排序在随机数组和近似有序数组中的排序性能比较
+
+![随机数组和近似有序数组](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlqpc4ky0001qjkhcbz2q2s1.png)

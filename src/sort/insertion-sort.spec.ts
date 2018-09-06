@@ -4,7 +4,7 @@ import { SortTestHelper } from '../util/sort-test-helper'
 
 import test from 'blue-tape'
 
-const arr: number[] = SortTestHelper.generateRandomArray(10000, 0, 10000)
+const arr: number[] = SortTestHelper.generateRandomArray(100000, 0, 100000)
 
 test ('insertionSort', async t => {
   const EXPECTED: boolean = true
@@ -27,4 +27,19 @@ test ('insertionSortOptimization', async t => {
 
   const result = SortTestHelper.isSorted(arr2)
   t.equal(result, EXPECTED, 'The arr2 should be sorted')
+})
+
+test('insertionSortOptimization', async t => {
+  // copy the sorted array
+  const arr3: number[] = SortTestHelper.generateRandomNearlyOrderedArray(100000, 5)
+
+  SortTestHelper.testComplexity(
+    'insertionSortOptimization',
+    InsertionSort.insertionSortOptimization,
+    arr3,
+  )
+
+  const EXPECTED: boolean = true
+  const result: boolean = SortTestHelper.isSorted(arr3)
+  t.equal(result, EXPECTED, 'The arr3 should be in order')
 })
