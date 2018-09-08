@@ -1,3 +1,4 @@
+import { log } from 'brolog'
 export class ShellSort {
   /**
    * The implementation of shell sort
@@ -9,7 +10,6 @@ export class ShellSort {
     while (h < arr.length / 3) {
       h = 3 * h + 1
     }
-
     while (h >= 1) {
       // h-sort the array
       for (let i = h; i < arr.length; i++) {
@@ -22,7 +22,7 @@ export class ShellSort {
         }
         arr[j] = currentValue
       }
-      h /= 3
+      h = Math.floor(h / 3)
     }
   }
 }

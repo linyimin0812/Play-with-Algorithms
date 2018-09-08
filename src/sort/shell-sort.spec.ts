@@ -8,7 +8,6 @@ const arr: number[] = SortTestHelper.generateRandomArray(10000, 0, 10000)
 test('shellSort', async t => {
   const EXPECTED: boolean = true
   const arr1: number[]    = arr.slice(0)
-  // SelectionSort.selectionSort(arr)
   SortTestHelper.testComplexity('shellSort', ShellSort.shellSort, arr1)
   const result: boolean = SortTestHelper.isSorted(arr1)
   t.equal(result, EXPECTED, 'The arr1 should be sorted')
