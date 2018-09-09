@@ -14,3 +14,5 @@
 [冒泡排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/bubble-sort.md)
 
 [希尔排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/shell-sort.md)
+
+[归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/merge-sort.md)

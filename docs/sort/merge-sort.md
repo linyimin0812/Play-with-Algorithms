@@ -2,7 +2,6 @@
 
 [分治法](https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95)
 
-![示意图](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlnuz6z40001wzkhosss0q2i.png)
 
 **实现思路**
 
