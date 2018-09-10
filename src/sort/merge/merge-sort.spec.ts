@@ -5,7 +5,7 @@ import { MergeSort } from './merge-sort'
 
 import test from 'blue-tape'
 
-const arr: number[] = SortTestHelper.generateRandomNearlyOrderedArray(100000, 0)
+const arr: number[] = SortTestHelper.generateRandomNearlyOrderedArray(50000, 0)
 
 test ('insertionSortOptimization', async t => {
   const EXPECTED: boolean = true
@@ -51,3 +51,17 @@ test('mergeSortOptimizationWithMerge', async t => {
   t.equal(result, EXPECTED, 'The arr3 should be in order')
 })
 
+test('mergeSortOptimizationWithInsertionSort', async t => {
+  // copy the sorted array
+  const arr4: number[] = arr.slice(0)
+
+  SortTestHelper.testComplexity(
+    'mergeSortOptimizationWithInsertionSort',
+    MergeSort.mergeSortOptimizationWithInsertionSort,
+    arr4,
+  )
+
+  const EXPECTED: boolean = true
+  const result: boolean   = SortTestHelper.isSorted(arr4)
+  t.equal(result, EXPECTED, 'The arr4 should be in order')
+})

@@ -111,11 +111,66 @@ private static merge(arr: number, l: number, mid: number, r: number) {
 } 
 ```
 
-**优化代码**
 2. 对递归过程的优化
 
-**优化代码实现**
+当序列的长度足够小的时候,序列是趋向于有序的,所以可以使用插入排序替代部分归并排序以提高效率
 
+**优化代码实现**
+```typescript
+public static mergeSort (arr: number[]) {
+  __mergeSort(arr, 0, arr.length - 1)
+}
+
+private static __mergeSort (arr: number[], l: number, r: number) {
+  //当序列足够短的时候直接使用插入排序进行优化
+  if (r - l < 15) {
+    insertionSort(arr, l, r)
+    return
+  }
+  const mid = Math.floor((l + r) / 2)
+  __mergeSort(arr, l, mid)
+  __mergeSort(arr, mid + 1, r)
+  __merge(arr, l, r)
+}
+
+private static __merge(arr: number[], l: number, mid: number, r: number) {
+  // 辅助空间
+  const aux: number[] = new Array(r - l + 1)
+  for (let i = l; i <= r; i++) {
+    aux[i - l] = arr[i]
+  }
+  let i = l
+  let j = mid + 1
+  for (let k = l; k <= r; k++) {
+    if (i > mid) {
+      arr[k] = aux[j - l]
+      j++
+    } else if (j > r) {
+      arr[k] = aux[i - l]
+      i++
+    }else if (aux[i - l] > aux[j - l]) {
+      arr[k] = arr[j - l]
+      j++
+    } else {
+      arr[k] = arr[i - l]
+      i++
+    }
+  }
+}
+
+private static __insertionSort (arr: number[], l: number, r: number) {
+  for (let i = l + 1; i <= r; i++) {
+    let j = l + 1
+    const currentValue: number = arr[j]
+    for (; j > l; j--) {
+      if (arr[j - 1] > currentValue) {
+        arr[j] = arr[j - 1]
+      }
+    }
+    arr[j] = currentValue
+  }
+}
+```
 
 **性能比较**
 

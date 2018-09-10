@@ -1,14 +1,25 @@
 export class MergeSort {
   /**
    * The implementation of mergeSort with recursion
-   * @param arr The arr is to be sorted
+   * @param arr The arr is the array to be sorted
    */
   public static mergeSort (arr: number[]) {
     MergeSort.__mergeSort(arr, 0, arr.length - 1 )
   }
 
+  /**
+   * @param arr The arr is the array to be sorted
+   */
   public static mergeSortOptimizationWithMerge (arr: number[]) {
     MergeSort.__mergeSortOptimizationWithMerge(arr, 0, arr.length - 1)
+  }
+
+  /**
+   * Use insertionSort replace merge sort wneh the sequences are small enough
+   * @param arr The arr is the array to be sorted
+   */
+  public static mergeSortOptimizationWithInsertionSort (arr: number[]) {
+    MergeSort.__mergeSortOptimizationWithInsertionSort(arr, 0, arr.length - 1)
   }
 
   /**
@@ -44,9 +55,40 @@ export class MergeSort {
     if (arr[mid] > arr[mid + 1]) {
       MergeSort.__merge(arr, l, mid, r)
     }
+  }
+
+  /**
+   * The optimized implementation of merge sort useing insertion sort when the sequences are small enough 
+   * @param arr 
+   * @param l The begin of the sequence
+   * @param r The end of the sequence
+   */
+  private static __mergeSortOptimizationWithInsertionSort (arr: number[], l: number, r: number) {
+    if (r-l <= 15) {
+      MergeSort.__insertionSort(arr, l, r)
+      return
+    }
+
+    const mid: number = Math.floor((r + l) / 2)
+    MergeSort.__mergeSortOptimizationWithInsertionSort(arr, l, mid)
+    MergeSort.__mergeSortOptimizationWithInsertionSort(arr, mid + 1, r)
     MergeSort.__merge(arr, l, mid, r)
   }
-  
+
+  private static __insertionSort (arr: number[], l: number, r: number) {
+    for (let i = l + 1; i <= r; i++) {
+      let j = i
+      const currentValue: number = arr[j]
+      for (j = i; j > l; j--) {
+        if (currentValue < arr[j - 1]) {
+          arr[j] = arr[j - 1]
+        }
+      }
+      arr[j] = currentValue
+    }
+    return
+  }
+
   // Merge arr[l,mid] and arr[mid + 1, r], and they are in order
   private static __merge(arr: number[], l: number, mid: number, r: number) {
     // Create auxiliary space
