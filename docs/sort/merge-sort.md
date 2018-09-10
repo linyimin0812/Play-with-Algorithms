@@ -60,9 +60,77 @@ private static __merge(arr: number[], l: number, mid: number, r: number) {
 }
 ```
 
+1. 对归并过程的优化
+
+在合并两个有序序列的过程中,先判断两个有序中arr[mid]和arr[mid + 1]的大小,如果arr[mid]小于arr[mid+1],则不需要进行归并,否则在进行归并操作.
+
+**优化代码实现**
+``` typescript
+public static mergeSort (arr: number[]) {
+  __mergeSort(arr, 0, arr.length - 1)
+}
+
+private static __mergeSort(arr: number[], l: number, r: number) {
+  if (l >= r) {
+    return
+  }
+
+  const mid: number = Math.floor((l + r) / 2)
+  __mergeSort(arr, l, mid)
+  __mergeSort(arr, mid + 1, r)
+  // 进行优化, 如果有序,则不必在归并
+  if (arr[mid] > arr[mid + 1])
+    merge(arr, l, mid, r)
+}
+
+private static merge(arr: number, l: number, mid: number, r: number) {
+  // 辅助数组
+  const aux: number[] = new Array(r - l + 1)
+  for (let i = l; i <= r; i++) {
+    aux[i - l] = arr[i]
+  }
+
+  let i: number = l
+  let j: number = mid + 1
+
+  for (let k = l; k <= r; k++) {
+    if (i > mid) {
+      arr[k] = aux[j - l]
+      j++
+    } else if (j > r) {
+      arr[k] = aux[i - l]
+      i++
+    } else if (aux[i - l] > aux[j - 1]) {
+      arr[k] = aux[j - 1]
+      j ++
+    } else {
+      arr[k] = aux[i - l]
+      i++
+    }
+  }
+} 
+```
+
+**优化代码**
+2. 对递归过程的优化
+
+**优化代码实现**
+
+
 **性能比较**
 
-[优化之后的插入排序和归并排序性能比较](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlv2hzid0003azkh8tjrat5q.png)
+- 优化之后的插入排序和归并排序性能比较
+![优化之后的插入排序和归并排序性能比较](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlv2hzid0003azkh8tjrat5q.png)
+
+- 归并排序与优化之后的插入排序进行比较
+对有序数组进行排序,优化之后的插入排序的性能要远远高于归并排序
+![希尔排序与优化之后的插入排序进行比较](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlvnqzce0005azkh6vhl0gma.png)
+
+- 对归并过程进行优化之后归并排序和插入排序的性能比较
+
+可以返现对有序序列的排序,优化之后的归并排序性能要优于普通的归并排序,但是还是比插入排序弱.
+![对归并过程进行优化之后归并排序和插入排序的性能比较](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlvoqgpi0006azkh0a22urpk.png)
+
 
 **特点**
 

@@ -1,8 +1,22 @@
 export class MergeSort {
+  /**
+   * The implementation of mergeSort with recursion
+   * @param arr The arr is to be sorted
+   */
   public static mergeSort (arr: number[]) {
     MergeSort.__mergeSort(arr, 0, arr.length - 1 )
   }
-  // Use recusion to sort arr[l, r]
+
+  public static mergeSortOptimizationWithMerge (arr: number[]) {
+    MergeSort.__mergeSortOptimizationWithMerge(arr, 0, arr.length - 1)
+  }
+
+  /**
+   * Use recusion to sort arr[l, r]
+   * @param arr 
+   * @param l The begin of the array
+   * @param r The end of the array
+   */
   private static __mergeSort (arr: number[], l: number, r: number) {
     if (l >= r) {
       return
@@ -11,6 +25,25 @@ export class MergeSort {
     const mid: number = Math.floor((l + r) / 2)
     MergeSort.__mergeSort(arr, l, mid)
     MergeSort.__mergeSort(arr, mid + 1, r)
+    MergeSort.__merge(arr, l, mid, r)
+  }
+
+  /**
+   * Use Recursion to sort arr[l, r], and if the 2 sequences are in order, not invoke the merge function 
+   * @param arr 
+   * @param l The begin of the array
+   * @param r The end of the array
+   */
+  private static __mergeSortOptimizationWithMerge (arr: number[], l: number, r: number) {
+    if (l >= r) {
+      return
+    }
+    const mid: number = Math.floor((r + l) / 2)
+    MergeSort.__mergeSortOptimizationWithMerge(arr, l, mid)
+    MergeSort.__mergeSortOptimizationWithMerge(arr, mid + 1, r)
+    if (arr[mid] > arr[mid + 1]) {
+      MergeSort.__merge(arr, l, mid, r)
+    }
     MergeSort.__merge(arr, l, mid, r)
   }
   
