@@ -1,7 +1,7 @@
 import test from 'blue-tape'
 
-import { SortTestHelper } from '../util/sort-test-helper'
-import { InsertionSort } from './insertion-sort'
+import { SortTestHelper } from '../../util/sort-test-helper'
+import { InsertionSort } from '../insertion/insertion-sort'
 import { ShellSort } from './shell-sort'
 
 const arr: number[] = SortTestHelper.generateRandomArray(10000, 0, 10000)
