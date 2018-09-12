@@ -1,17 +1,17 @@
-export class MergeSort {
+export class MergeSortRecursion {
   /**
    * The implementation of mergeSort with recursion
    * @param arr The arr is the array to be sorted
    */
   public static mergeSort (arr: number[]) {
-    MergeSort.__mergeSort(arr, 0, arr.length - 1 )
+    MergeSortRecursion.__mergeSort(arr, 0, arr.length - 1 )
   }
 
   /**
    * @param arr The arr is the array to be sorted
    */
   public static mergeSortOptimizationWithMerge (arr: number[]) {
-    MergeSort.__mergeSortOptimizationWithMerge(arr, 0, arr.length - 1)
+    MergeSortRecursion.__mergeSortOptimizationWithMerge(arr, 0, arr.length - 1)
   }
 
   /**
@@ -19,7 +19,7 @@ export class MergeSort {
    * @param arr The arr is the array to be sorted
    */
   public static mergeSortOptimizationWithInsertionSort (arr: number[]) {
-    MergeSort.__mergeSortOptimizationWithInsertionSort(arr, 0, arr.length - 1)
+    MergeSortRecursion.__mergeSortOptimizationWithInsertionSort(arr, 0, arr.length - 1)
   }
 
   /**
@@ -34,9 +34,9 @@ export class MergeSort {
     }
     // Important: We need to make sure mid is a integer, or the sort algorithm will be very slow
     const mid: number = Math.floor((l + r) / 2)
-    MergeSort.__mergeSort(arr, l, mid)
-    MergeSort.__mergeSort(arr, mid + 1, r)
-    MergeSort.__merge(arr, l, mid, r)
+    MergeSortRecursion.__mergeSort(arr, l, mid)
+    MergeSortRecursion.__mergeSort(arr, mid + 1, r)
+    MergeSortRecursion.__merge(arr, l, mid, r)
   }
 
   /**
@@ -50,10 +50,10 @@ export class MergeSort {
       return
     }
     const mid: number = Math.floor((r + l) / 2)
-    MergeSort.__mergeSortOptimizationWithMerge(arr, l, mid)
-    MergeSort.__mergeSortOptimizationWithMerge(arr, mid + 1, r)
+    MergeSortRecursion.__mergeSortOptimizationWithMerge(arr, l, mid)
+    MergeSortRecursion.__mergeSortOptimizationWithMerge(arr, mid + 1, r)
     if (arr[mid] > arr[mid + 1]) {
-      MergeSort.__merge(arr, l, mid, r)
+      MergeSortRecursion.__merge(arr, l, mid, r)
     }
   }
 
@@ -65,14 +65,14 @@ export class MergeSort {
    */
   private static __mergeSortOptimizationWithInsertionSort (arr: number[], l: number, r: number) {
     if (r-l <= 15) {
-      MergeSort.__insertionSort(arr, l, r)
+      MergeSortRecursion.__insertionSort(arr, l, r)
       return
     }
 
     const mid: number = Math.floor((r + l) / 2)
-    MergeSort.__mergeSortOptimizationWithInsertionSort(arr, l, mid)
-    MergeSort.__mergeSortOptimizationWithInsertionSort(arr, mid + 1, r)
-    MergeSort.__merge(arr, l, mid, r)
+    MergeSortRecursion.__mergeSortOptimizationWithInsertionSort(arr, l, mid)
+    MergeSortRecursion.__mergeSortOptimizationWithInsertionSort(arr, mid + 1, r)
+    MergeSortRecursion.__merge(arr, l, mid, r)
   }
 
   private static __insertionSort (arr: number[], l: number, r: number) {

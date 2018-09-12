@@ -1,7 +1,7 @@
 import { InsertionSort } from '../insertion/insertion-sort'
 
 import { SortTestHelper } from '../../util/sort-test-helper'
-import { MergeSort } from './merge-sort-recursion'
+import { MergeSortRecursion } from './merge-sort-recursion'
 
 import test from 'blue-tape'
 
@@ -27,7 +27,7 @@ test('mergeSort', async t => {
 
   SortTestHelper.testComplexity(
     'mergeSort',
-    MergeSort.mergeSort,
+    MergeSortRecursion.mergeSort,
     arr2,
   )
 
@@ -42,7 +42,7 @@ test('mergeSortOptimizationWithMerge', async t => {
 
   SortTestHelper.testComplexity(
     'mergeSortOptimizationWithMerge',
-    MergeSort.mergeSortOptimizationWithMerge,
+    MergeSortRecursion.mergeSortOptimizationWithMerge,
     arr3,
   )
 
@@ -57,7 +57,7 @@ test('mergeSortOptimizationWithInsertionSort', async t => {
 
   SortTestHelper.testComplexity(
     'mergeSortOptimizationWithInsertionSort',
-    MergeSort.mergeSortOptimizationWithInsertionSort,
+    MergeSortRecursion.mergeSortOptimizationWithInsertionSort,
     arr4,
   )
 
