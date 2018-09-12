@@ -1,7 +1,7 @@
 import { InsertionSort } from '../insertion/insertion-sort'
 
 import { SortTestHelper } from '../../util/sort-test-helper'
-import { MergeSort } from './merge-sort'
+import { MergeSort } from './merge-sort-recursion'
 
 import test from 'blue-tape'
 
