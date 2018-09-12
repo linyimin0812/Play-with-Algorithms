@@ -15,4 +15,6 @@
 
 [希尔排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/shell-sort.md)
 
-[归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/merge-sort.md)
+
+#### 时间复杂度为O(N * ln N)的排序算法
+[归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/merge/merge-sort.md)
