@@ -1,5 +1,5 @@
 # algorithm-learning
-算法与数据结构课堂笔记及基于typescript的实现
+算法与数据结构课堂笔记及基于typescript, golang的实现
 
 ## 目录
 
