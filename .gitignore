@@ -64,3 +64,5 @@ typings/
 .DS_Store
 
 /generated/
+
+src/golang/pkg
