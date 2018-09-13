@@ -79,6 +79,7 @@ __min(j + i + i - 1, arr.length - 1): 保证右边序列不越界
 **注意程序运行中的边界问题,在开发时可以按照一般情况进行编写,编写完之后再考虑边界问题,确定好边界后添加相关条件**
 
 **性能**
+
 ![自底向上的归并排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlzac7c500022lkhzgdf61fr.png)
 
 **特点**
