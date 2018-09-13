@@ -7,11 +7,11 @@
 
 ![示意图](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlnuz6z40001wzkhosss0q2i.png)
 
-实现思路:
+**实现思路**
 
 在未排序部分中寻找最小元素的索引,然后将最小元素与未排序部分的第一个元素交换位置,此时最小元素成为当前有序部分中最大的元素,以此类推,直至未排序部分为空,排序完成.
 
-代码实现:
+**代码实现**
 ```typescript
 function selectionSort (arr: number[]): void {
   for (let i = 0; i < arr.length; i++) {
@@ -30,6 +30,10 @@ function selectionSort (arr: number[]): void {
 }
 ```
 
-特点:
+**特点**
 
 对于任意一个数组,两层循环中每层循环都必须完成,时间复杂度(O(N * N))
+
+**性能**
+
+![对10000个随机序列进行排序所需的时间](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjm0nvrwh0000j7khjrk2rbc6.png)
