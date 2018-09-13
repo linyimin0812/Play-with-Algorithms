@@ -7,17 +7,17 @@
 
 #### 最差时间复杂度为O(N * N)的排序算法
 
-[选择排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/typescript/selection-sort.md)
+[选择排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/selection-sort.md)
 
-[插入排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/typescript/insertion-sort.md)
+[插入排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/insertion-sort.md)
 
-[冒泡排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/typescript/bubble-sort.md)
+[冒泡排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/bubble-sort.md)
 
-[希尔排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/typescript/shell-sort.md)
+[希尔排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/shell-sort.md)
 
 
 #### 时间复杂度为O(N * ln N)的排序算法
 
 归并排序
-- [递归实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/typescript/merge/merge-sort-recursion.md)
-- [迭代实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/sort/typescript/merge/merge-sort-iteration.md)
+- [递归实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/merge/merge-sort-recursion.md)
+- [迭代实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/merge/merge-sort-iteration.md)
