@@ -53,7 +53,6 @@ func TestComplexity(sortName string, sortFunc sort, arr []int) {
 	start := time.Now().UnixNano() / 1000000
 	sortFunc(arr)
 	end := time.Now().UnixNano() / 1000000
-	log.Printf("end = %d", end)
 	if ok := IsSorted(arr); ok {
 		time := float64(end-start) / 1000
 		log.Printf("SortTestHelper %s spend %f", sortName, time)
