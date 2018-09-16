@@ -66,6 +66,6 @@ export class SortTestHelper {
     if (! isOrdered) {
       throw new Error('The array is not in order')
     }
-    log.info('SortTestHelper', `${sortName} spend %s s`, (end - start) / 1000)
+    log.info('SortTestHelper', `${sortName} sorts array which contains ${arr.length} elements spending %s s`, (end - start) / 1000)
   }
 }
