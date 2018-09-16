@@ -21,3 +21,7 @@
 归并排序
 - [递归实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/merge/merge-sort-recursion.md)
 - [迭代实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/merge/merge-sort-iteration.md)
+
+快速排序
+- [递归实现简单快速排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/quick-sort.md)
+  
