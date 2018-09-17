@@ -67,3 +67,5 @@ typings/
 
 src/golang/pkg
 src/golang/bin
+src/golang/src/github.com
+src/golang/src/golang.org
