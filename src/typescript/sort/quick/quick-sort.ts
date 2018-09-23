@@ -48,3 +48,41 @@ export class QuickSort {
     arr  [j]   = temp
   }
 }
+
+// Optimized quick sort with select a random element as base element 
+export class QuickSortOptimization1 {
+  public static quickSort(arr: number[]) {
+    QuickSortOptimization1.__quickSort(arr, 0, arr.length - 1)
+  }
+
+  private static __quickSort(arr: number[], l: number, r: number) {
+    if (l >= r) {
+      return
+    }
+    const p = QuickSortOptimization1.__partition(arr, l, r)
+    QuickSortOptimization1.__quickSort(arr, l, p - 1)
+    QuickSortOptimization1.__quickSort(arr, p + 1, r)
+  }
+
+  private static __partition(arr: number[], l: number, r: number): number {
+    // Select a random element as base element
+    const random = Math.floor(Math.random() * (r - l + 1)) + l
+    QuickSortOptimization1.__swap(arr, l, random)
+    const v = arr[l]
+    let i = l
+    for (let j = l + 1; j <= r; j++) {
+      if (arr[j] < v) {
+        this.__swap(arr, i + 1, j)
+        i++
+      }
+    }
+    this.__swap(arr, l, i)
+    return i
+  }
+
+  private static __swap(arr: number[], i: number, j: number) {
+    const temp = arr[i]
+    arr  [i]   = arr[j]
+    arr  [j]   = temp
+  }
+}

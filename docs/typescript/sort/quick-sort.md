@@ -1,4 +1,4 @@
-### 希尔排序
+### 快速排序
 
 **核心思想**
 
@@ -50,8 +50,65 @@ function partition(arr: numbner[], l: number, r: number): number {
 
 ```
 
+**特点**
+
+1. 对于随机的,非大量重复元素的数组,时间复杂度为O($log_2n$)
+2. 对近乎有序的序列进行排序,快速排序算法会退化成O($n^2$)
+3. 存在大量重复键值的序列,快速排序算法会退化成O($n^2$)
+
+**优化**
+1. 对于近乎有序的序列进行排序,默认选择第一个元素作为基准元素,生成的两个序列中某一个序列基本为空,退化成一棵极度不平衡的二叉树
+
+![](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmeyjlbu0000rrkhkt267uiu.png)
+
+所以,优化的方法就是:尽量使得得到的两个序列的长度相一致,所以采用随机选取基准元素的方式完成快速排序
+
+**代码实现**
+```typescript
+function quickSort(arr: numberp[]) {
+  __quickSort(arr, 0, arr.length - 1)
+}
+
+// 递归方法实现快速排序
+function __quickSort(arr: number[], l: number, r: number) {
+  if (l >= r) {
+    return
+  }
+  const p = __partition(arr, l, r)
+  __quickSort(arr, l, p - 1)
+  __quickSort(arr, p + 1, r)
+}
+
+// 对于基准元素的分区操作
+function __partition(arr: number, l: number, r: number): number {
+  // 随机选择一个基准元素
+  const random = Math.floor((Math.rand() * (r - l + 1))) + l
+  swap(arr, l, random)
+  const v      = arr[l]
+  let   i      = l
+  for (let j = l + 1; j <= r; j ++) {
+    if (arr[j] < v) {
+      swap(arr, i + 1, j)
+      i++
+    }
+  }
+  swap(arr, l, i)
+  return i
+}
+
+```
+
+2. 存在大量重复键值的序列
+
+选取随机元素作为基准元素,成功避免了快速排序对几乎有序序列退化成时间复杂度为O($n^2$)的算法,但是,当排序序列中存在大量的重复元素时,快速排序依然会退化成时间复杂度为O($n^2$)的算法
+3. 两路快速排序
+
 **性能**
 
 - 递归实现简单快速排序性能
 
 ![递归实现简单快速排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjm527veh000188kh5himw1oh.png)
+
+- 选取随机元素作为基准元素快速排序的性能
+- 
+![选取随机元素作为基准元素快速排序的性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmf0aack0001rrkhbdsa0po3.png)
