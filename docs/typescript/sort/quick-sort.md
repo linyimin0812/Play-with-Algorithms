@@ -101,6 +101,39 @@ function __partition(arr: number, l: number, r: number): number {
 2. 存在大量重复键值的序列
 
 选取随机元素作为基准元素,成功避免了快速排序对几乎有序序列退化成时间复杂度为O($n^2$)的算法,但是,当排序序列中存在大量的重复元素时,快速排序依然会退化成时间复杂度为O($n^2$)的算法
+
+**优化方法**: 使用二路快速排序,其思想就是尽可能使分区得到的两个序列长度相一致
+
+![二路快速排序](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmf0nh6p0002rrkh0ncvuirx.png)
+
+
+**代码实现**
+
+```typescript
+// 使用两路快速排序
+function partition(arr: number[], l: number, r: number): number {
+  const random = Math.floor(Math.random() * (r - l + 1)) + l
+  swap(arr, l, random)
+  const v = arr[l]
+  let i = l + 1
+  let j = r
+  while (true) {
+    while (arr[i] <= v) {
+      i++
+    }
+    while (arr[j] >= v) {
+      j--
+    }
+    if (i > j){
+      break
+    }
+    swap(arr, i, j)
+  }
+  swap(arr, l, j)
+  return j
+}
+```
+
 3. 两路快速排序
 
 **性能**
@@ -110,5 +143,9 @@ function __partition(arr: number, l: number, r: number): number {
 ![递归实现简单快速排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjm527veh000188kh5himw1oh.png)
 
 - 选取随机元素作为基准元素快速排序的性能
-- 
+
 ![选取随机元素作为基准元素快速排序的性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmf0aack0001rrkhbdsa0po3.png)
+
+- 双路快速排序性能
+
+![双路快速排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmfnxirh0003rrkhvfzwl3ge.png)
