@@ -1,8 +1,8 @@
 import test from 'blue-tape'
-import { QuickSort, QuickSortOptimization1, QuickSort2Way } from './quick-sort'
-import { SortTestHelper } from '../../util/sort-test-helper';
+import { QuickSort, QuickSortOptimization1, QuickSort2Way, QuickSort3Way } from './quick-sort'
+import { SortTestHelper } from '../../util/sort-test-helper'
 
-const n   = 1000000
+const n   = 100000
 
 // a random array
 const arr = SortTestHelper.generateRandomArray(n, 0, n)
@@ -11,7 +11,7 @@ const arr = SortTestHelper.generateRandomArray(n, 0, n)
 const arrNearlyOrder = SortTestHelper.generateRandomNearlyOrderedArray(n, 100)
 
 // a large number of duplicate elements array
-const arrMostDuplicate = SortTestHelper.generateRandomArray(n, 0, 1000)
+const arrMostDuplicate = SortTestHelper.generateRandomArray(n, 0, 100)
 
 // quick sort general implementation
 test('QuickSort', async t => {
@@ -90,6 +90,32 @@ test('QuickSortWith2Way', async t => {
 
   const result3   = SortTestHelper.isSorted(arr9)
   t.equal(result3, EXPECTED, 'Nearly order arr9 should be in order')
+})
+
+// quick sort implementation with 3 ways
+test('QuickSortWith3Way', async t => {
+
+  // test random array
+  const arr10 = arr.slice(0)
+  SortTestHelper.testComplexity('quickSort', QuickSort3Way.quickSort, arr10)
+
+  const EXPECTED = true
+  const result1   = SortTestHelper.isSorted(arr10)
+  t.equal(result1, EXPECTED, 'Random arr10 should be in order')
+
+  // test nearly ordered array
+  const arr11 = arrNearlyOrder.slice(0)
+  SortTestHelper.testComplexity('quickSort', QuickSort3Way.quickSort, arr11)
+
+  const result2   = SortTestHelper.isSorted(arr11)
+  t.equal(result2, EXPECTED, 'Nearly order arr11 should be in order')
+
+  // test array which contains a large number of duplicate elements
+  const arr12 = arrNearlyOrder.slice(0)
+  SortTestHelper.testComplexity('quickSort', QuickSort3Way.quickSort, arr12)
+
+  const result3   = SortTestHelper.isSorted(arr12)
+  t.equal(result3, EXPECTED, 'Nearly order arr12 should be in order')
 })
 
 

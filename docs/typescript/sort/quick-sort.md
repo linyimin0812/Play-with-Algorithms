@@ -134,7 +134,43 @@ function partition(arr: number[], l: number, r: number): number {
 }
 ```
 
-3. 两路快速排序
+3. 三路快速排序
+
+三路排序的核心思想是: 在分区时,小于基准元素的归为一部分,等于基准元素的归为一部分及大于基准元素的归为另外一部分,下次只对小于基准元素和大于基准元素的部分进行递归快速排序,在存在大量重复元素的待排序列中,三路快速排序的效率要高于双路快速排序.
+
+![未完成分区](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmg0vz9i00025hkh4vbqwkcf.png)
+
+![已完成分区](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmg0xec900035hkhv76gujrh.png)
+
+
+**代码实现**
+
+```typescript
+function __partition(arr: number[], l: number, r: number): {lt: number, gt: number} {
+    // Select a random element as base element
+    const random = Math.floor(Math.random() * (r - l + 1)) + l
+    QuickSort3Way.__swap(arr, l, random)
+    const v  = arr[l]
+    let   i  = l + 1
+    let   lt = l
+    let   gt = r + 1
+    while (i < gt) {
+      if (arr[i] < v) {
+        this.__swap(arr, i, lt+1)
+        i++
+        lt++
+      } else if (arr[i] > v) {
+        this.__swap(arr, i, gt - 1)
+        gt--
+      } else {
+        i++
+      }
+    }
+    this.__swap(arr, l, lt)
+    return {lt, gt}
+  }
+
+```
 
 **性能**
 
@@ -153,3 +189,7 @@ function partition(arr: number[], l: number, r: number): number {
 - 双路快速排序性能
 
 ![双路快速排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmfnxirh0003rrkhvfzwl3ge.png)
+
+- 三路快速排序性能
+
+![三路快速排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmg2twho00045hkhl7vp4kz2.png)

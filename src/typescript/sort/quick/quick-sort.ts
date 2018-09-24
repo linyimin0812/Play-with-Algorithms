@@ -131,3 +131,49 @@ export class QuickSort2Way {
     arr  [j]   = temp
   }
 }
+
+// Optimized quick sort with 3 way quick sort 
+export class QuickSort3Way {
+  public static quickSort(arr: number[]) {
+    QuickSort3Way.__quickSort(arr, 0, arr.length - 1)
+  }
+
+  private static __quickSort(arr: number[], l: number, r: number) {
+    if (l >= r) {
+      return
+    }
+    const {lt, gt} = QuickSort3Way.__partition(arr, l, r)
+    QuickSort3Way.__quickSort(arr, l, lt - 1)
+    QuickSort3Way.__quickSort(arr, gt, r)
+  }
+
+  private static __partition(arr: number[], l: number, r: number): {lt: number, gt: number} {
+    // Select a random element as base element
+    const random = Math.floor(Math.random() * (r - l + 1)) + l
+    QuickSort3Way.__swap(arr, l, random)
+    const v  = arr[l]
+    let   i  = l + 1
+    let   lt = l
+    let   gt = r + 1
+    while (i < gt) {
+      if (arr[i] < v) {
+        this.__swap(arr, i, lt+1)
+        i++
+        lt++
+      } else if (arr[i] > v) {
+        this.__swap(arr, i, gt - 1)
+        gt--
+      } else {
+        i++
+      }
+    }
+    this.__swap(arr, l, lt)
+    return {lt, gt}
+  }
+
+  private static __swap(arr: number[], i: number, j: number) {
+    const temp = arr[i]
+    arr  [i]   = arr[j]
+    arr  [j]   = temp
+  }
+}
