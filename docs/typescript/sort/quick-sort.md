@@ -142,6 +142,10 @@ function partition(arr: number[], l: number, r: number): number {
 
 ![递归实现简单快速排序性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjm527veh000188kh5himw1oh.png)
 
+当对近乎有序的大量元素序列使用简单的快速排序时,可能会出现栈溢出问题
+
+![栈溢出](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmfqkh0w0008rrkhjdw0q52o.png)
+
 - 选取随机元素作为基准元素快速排序的性能
 
 ![选取随机元素作为基准元素快速排序的性能](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjmf0aack0001rrkhbdsa0po3.png)
