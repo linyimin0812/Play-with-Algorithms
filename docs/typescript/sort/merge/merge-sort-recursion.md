@@ -189,7 +189,7 @@ private static __insertionSort (arr: number[], l: number, r: number) {
 
 **特点**
 
-1. 以空间换取时间,空间复杂度为O(N) 
-2. 时间复杂度为O(N * lnN)
+1. 以空间换取时间,空间复杂度为O(n) 
+2. 时间复杂度为O($n * log_2n$)
 
 **维护变量在算法运行过程中永远满足定义,是准确实现算法功能的重要保证**

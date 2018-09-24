@@ -57,10 +57,10 @@ function bubbleSortOptimization (arr: number[]) {
 
 **性能**
 
-在对有序数组进行排序的时候,优化之后的冒泡排序比普通的冒泡排序效率要高(O(N)比O(N * N))
-![冒泡排序对有序数组的排序](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlrfjn4i0007qjkh0tzbls3u.png)\
+在对有序数组进行排序的时候,优化之后的冒泡排序比普通的冒泡排序效率要高(O(N)比O($n^2$))
+![冒泡排序对有序数组的排序](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlrfjn4i0007qjkh0tzbls3u.png)
 
-在对近似有序数组进行排序时,优化之后的冒泡排序的效率和普通冒泡排序一样(都是O(N * N))
+在对近似有序数组进行排序时,优化之后的冒泡排序的效率和普通冒泡排序一样(都是O($n^2$))
 
 ![冒泡排序对近似有序的数组进行排序](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjlrft57q0008qjkhr3z4wwes.png)
 
@@ -68,4 +68,4 @@ function bubbleSortOptimization (arr: number[]) {
 **冒泡排序,选择排序与插入排序的比较**
 
 - 冒泡排序(选择排序)第二层循环每一次都会得到一个最终顺序的顺序部分(每扫描一轮，将确定一个元素的位置),插入排序并非最终顺序
-- 冒泡排序(选择排序)中,对于任意一个数组,两层循环中每层循环都必须完成,时间复杂度(O(N * N)), 插入排序可以提前中止,最优时间复杂度为O(N)
+- 冒泡排序(选择排序)中,对于任意一个数组,两层循环中每层循环都必须完成,时间复杂度(O($n^2$)), 插入排序可以提前中止,最优时间复杂度为O(N)

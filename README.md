@@ -5,7 +5,7 @@
 
 ### 排序算法
 
-#### 最差时间复杂度为O(N * N)的排序算法
+#### 最差时间复杂度为O($n^2$)的排序算法
 
 [选择排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/selection-sort.md)
 
@@ -16,7 +16,7 @@
 [希尔排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/shell-sort.md)
 
 
-#### 时间复杂度为O(N * ln N)的排序算法
+#### 时间复杂度为O($n * log_2n$)的排序算法
 
 归并排序
 - [递归实现归并排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/merge/merge-sort-recursion.md)
