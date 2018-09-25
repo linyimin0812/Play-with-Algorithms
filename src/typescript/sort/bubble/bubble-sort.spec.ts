@@ -1,5 +1,5 @@
 import test from 'blue-tape'
-import { SortTestHelper } from '../../util/sort-test-helper'
+import { SortTestHelper } from '../../util/sort/sort-test-helper'
 import { BubbleSort } from './bubble-sort'
 
 // Generate a ordered array

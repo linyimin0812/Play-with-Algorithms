@@ -1,6 +1,6 @@
 import test from 'blue-tape'
 
-import { SortTestHelper } from '../../util/sort-test-helper'
+import { SortTestHelper } from '../../util/sort/sort-test-helper'
 import { SelectionSort } from './selection-sort'
 
 test('selectionSort', async t => {

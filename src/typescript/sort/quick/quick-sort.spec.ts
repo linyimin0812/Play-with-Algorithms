@@ -1,6 +1,6 @@
 import test from 'blue-tape'
 import { QuickSort, QuickSortOptimization1, QuickSort2Way, QuickSort3Way } from './quick-sort'
-import { SortTestHelper } from '../../util/sort-test-helper'
+import { SortTestHelper } from '../../util/sort/sort-test-helper'
 
 const n   = 100000
 

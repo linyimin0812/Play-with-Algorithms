@@ -1,6 +1,6 @@
 import test from 'blue-tape'
 
-import { SortTestHelper } from '../../util/sort-test-helper'
+import { SortTestHelper } from '../../util/sort/sort-test-helper'
 import { InsertionSort } from '../insertion/insertion-sort'
 import { ShellSort } from './shell-sort'
 

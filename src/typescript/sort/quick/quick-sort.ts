@@ -1,4 +1,4 @@
-import {SortTestHelper} from '../../util/sort-test-helper'
+import {SortTestHelper} from '../../util/sort/sort-test-helper'
 export class QuickSort {
 
   /**
