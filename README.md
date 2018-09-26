@@ -24,4 +24,9 @@
 
 快速排序
 - [递归实现简单快速排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/quick-sort.md)
-  
+
+
+### 堆
+
+#### 最大堆  
+- [最大堆的简单实现](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/heap/max-heap.md)

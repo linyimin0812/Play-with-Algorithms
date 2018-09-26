@@ -146,5 +146,3 @@ export class MaxHeap {
 }
 
 ```
-
-
