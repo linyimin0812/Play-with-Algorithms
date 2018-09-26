@@ -41,6 +41,25 @@
 
 **代码实现**
 
+最核心的操作:
+
+shiftup和shiftdown
+
+- shift up
+
+插入新的元素时,在数组的末尾插入元素,然后逐一向上调整,使得整个数组满足最大堆的性质.
+
+
+- shift down
+
+取出最大元素时,将数组末尾的元素与第一个元素交换位置,然后调整第一个元素的位置,使得整个数组最后满足最大堆的性质.
+
+步骤:
+
+1. 判断当前元素是否存在孩子节点(左孩子节点,因为在完全二叉树中肯定不会只存在右孩子节点)
+2. 将左孩子与右孩子节点中最大的元素与父节点进行比较,如果大于父节点,交换位置,否则完成shift down操作,此时数组满足最大堆的性质
+3. 重复步骤1,2,直至当前元素不存在孩子节点,完成shift down操作.
+
 ```typescript
 export class MaxHeap {
 
@@ -82,11 +101,39 @@ export class MaxHeap {
     this.shiftUp(this.count)
   }
 
+  // 取出最大堆中的最大元素
+  public extractMax(): number {
+    if (this.count <= 0) {
+      throw new Error('The max heap is empty')
+    }
+
+    const maxValue = data[1]
+    swap(1, this.count)
+    this.count--
+    shiftDown(1)
+    return maxValue
+  }
+
   // 插入元素后保证最大堆的性质
   private shiftUp(index: number) {
     while (index > 1 && this.__data[index] > this.__data[Math.floor(index / 2)]) {
       this.swap(index, Math.floor(index / 2))
       index = Math.floor(index / 2)
+    }
+  }
+
+  private shiftDown(index: number) {
+    while(2 * index <= this.count) {
+      let j = 2 * index
+      if (j + 1 <= this.count && this.__data[j] < this.__data[j + 1]) {
+        j += 1
+      }
+      if (this.__data[index] < this.__data[j]) {
+        swap(index, j)
+        index = j
+      } else {
+        break
+      }
     }
   }
 
@@ -97,8 +144,7 @@ export class MaxHeap {
   }
 
 }
-```
 
-2. 待补充
+```
 
 

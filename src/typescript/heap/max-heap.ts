@@ -38,6 +38,18 @@ export class MaxHeap {
     this.shiftUp(this.count)
   }
 
+  // Get the max value in max heap 
+  public extractMax(): number {
+    if (this.count <= 0) {
+      throw new Error('The max heap is empty')
+    }
+    const maxValue = this.__data[1]
+    this.swap(1, this.count)
+    this.count--
+    this.shiftDown(1)
+    return maxValue
+  }
+
   // To promise the property of max heap when insert a new element
   private shiftUp(index: number) {
     while (index > 1 && this.__data[index] > this.__data[Math.floor(index / 2)]) {
@@ -46,6 +58,22 @@ export class MaxHeap {
     }
   }
 
+  // To promise the property of the max heap when extract the greatest element
+  private shiftDown(index: number) {
+    while(2 * index <= this.count) {
+      let j = 2 * index
+      if (j + 1 <= this.count && this.__data[j] < this.__data[j + 1]) {
+        j += 1
+      }
+
+      if (this.__data[index] < this.__data[j]) {
+        this.swap(index, j)
+        index = j
+      } else {
+        break
+      }
+    }
+  }
   private swap(i: number, j: number) {
     const       temp: number = this.__data[i]
     this.__data [i]          = this.__data[j]

@@ -42,3 +42,19 @@ test('MaxHeap isEmpty()', async t => {
   t.equal(result, false, 'The max heap should not be empty')
 
 })
+
+// if the array satisfies the property of max heap, the extrac element should be ordered
+test('MaxHeap extractMax()', async t => {
+  const maxHeap = new MaxHeap(10)
+  for (let i = 0; i < 10; i++) {
+    maxHeap.insert(i)
+  }
+
+  const EXPECTED = '9,8,7,6,5,4,3,2,1,0,'
+  let result = ''
+
+  for (let i = 0; i < 10; i++) {
+    result += maxHeap.extractMax() + ','
+  }
+  t.equal(result, EXPECTED, 'The extract element should be in order')
+})
