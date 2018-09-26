@@ -25,6 +25,9 @@
 快速排序
 - [递归实现简单快速排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/quick-sort.md)
 
+堆排序
+- [堆排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/heap-sort.md)
+
 
 ### 堆
 
