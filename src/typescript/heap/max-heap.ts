@@ -8,12 +8,28 @@ export class MaxHeap {
   // The size of max heap
   private count: number
 
-  constructor (capacity: number) {
+  constructor (capacity: number | number[]) {
     // For we store element from index 1
-    this.__data     = new Array<number>(capacity + 1)
-    this.capacity   = capacity
-    this.count      = 0
-    this.__data[0]  = 0
+    if (! Array.isArray(capacity)) {
+      this.__data     = new Array<number>(capacity + 1)
+      this.capacity   = capacity
+      this.count        = 0
+    } else {
+
+      // heapify
+      this.__data     = new Array<number> (capacity.length + 1)
+      this.capacity   = capacity.length
+      this.count      = 0
+
+      for (let i = 0; i < capacity.length; i++) {
+        this.__data[i+1] = capacity[i]
+      }
+
+      for (let i = Math.floor(capacity.length / 2); i >= 1; i--) {
+        this.shiftDown(i)
+      }
+    }
+    this.__data[0]    = 0
   }
 
   get data(): number[] {
@@ -51,6 +67,9 @@ export class MaxHeap {
     return maxValue
   }
 
+  public static heapify(arr: number[]) {
+
+  }
   // To promise the property of max heap when insert a new element
   private shiftUp(index: number) {
     while (index > 1 && this.__data[index] > this.__data[Math.floor(index / 2)]) {
