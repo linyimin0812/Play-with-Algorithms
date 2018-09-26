@@ -1,5 +1,9 @@
 import test from 'blue-tape'
 import { MaxHeap } from './max-heap'
+
+/**
+ * test MaxHeap insert function
+ */
 test("MaxHeap insert()", async t => {
   const maxHeap = new MaxHeap(10)
 
@@ -13,6 +17,9 @@ test("MaxHeap insert()", async t => {
   t.deepEqual(result, EXPECTED, 'arr should be satisty the property with max heap')
 })
 
+/**
+ * test MaxHeap size function
+ */
 test('MaxHeap size()', async t => {
   const maxHeap = new MaxHeap(10)
 
@@ -26,6 +33,9 @@ test('MaxHeap size()', async t => {
   t.equal(result, EXPECTED, 'The length of max heap should be 5')
 })
 
+/**
+ * test MaxHeap isEmpty function
+ */
 test('MaxHeap isEmpty()', async t => {
   const maxHeap  = new MaxHeap(10)
   const EXPECTED = true
@@ -43,6 +53,9 @@ test('MaxHeap isEmpty()', async t => {
 
 })
 
+/**
+ * test MaxHeap extractMax function
+ */
 // if the array satisfies the property of max heap, the extrac element should be ordered
 test('MaxHeap extractMax()', async t => {
   const maxHeap = new MaxHeap(10)

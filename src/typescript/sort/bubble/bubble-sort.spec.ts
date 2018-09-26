@@ -7,6 +7,9 @@ const orderedArr: number[] = SortTestHelper.generateRandomNearlyOrderedArray(100
 
 const nearlyOrderedArr: number[] = SortTestHelper.generateRandomNearlyOrderedArray(10000, 10)
 
+/**
+ * test bubble sort with ordered array
+ */
 test ('bubbleSort', async t => {
 
   const arr1: number[] = orderedArr.slice(0)
@@ -19,6 +22,9 @@ test ('bubbleSort', async t => {
   t.equal(result, EXPECTED, 'The arr1 should be in order')
 })
 
+/**
+ * test bubbleSortOptimization using ordered array 
+ */
 test ('bubbleSortOptimization', async t => {
   const arr2: number[]    = orderedArr.slice(0)
   const EXPECTED: boolean = true
@@ -33,6 +39,9 @@ test ('bubbleSortOptimization', async t => {
   t.equal(result, EXPECTED, 'The arr2 should be in order')
 })
 
+/**
+ * test bubbleSort using nearly ordered array 
+ */
 test ('bubbleSort', async t => {
 
   const arr3: number[] = nearlyOrderedArr.slice(0)

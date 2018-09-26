@@ -6,6 +6,7 @@ test('heap sort', async t => {
   const n = 1000000
   const arr = SortTestHelper.generateRandomArray(n, 0, n)
 
+  // test sort()
   const arr1 = arr.slice(0)
   SortTestHelper.testComplexity('sort()', sort, arr1)
 
@@ -14,6 +15,7 @@ test('heap sort', async t => {
 
   t.equal(result1, EXPECTED, 'arr1 should be rodered')
 
+  // test sortOptimizationWithHeapify()
   const arr2 = arr.slice(0)
   SortTestHelper.testComplexity('sortOptimizationWithHeapify()', sort, arr2)
 

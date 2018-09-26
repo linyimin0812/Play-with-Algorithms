@@ -5,7 +5,9 @@ import { SortTestHelper } from '../../util/sort/sort-test-helper'
 import test from 'blue-tape'
 
 const arr: number[] = SortTestHelper.generateRandomArray(100000, 0, 100000)
-
+/**
+ * test insertionSort function
+ */
 test ('insertionSort', async t => {
   const EXPECTED: boolean = true
   // copy the sorted array
@@ -15,6 +17,9 @@ test ('insertionSort', async t => {
   t.equal(result, EXPECTED, 'The arr1 should be sorted')
 })
 
+/**
+ * test insertionSortOptimization function with random array
+ */
 test ('insertionSortOptimization', async t => {
   const EXPECTED: boolean = true
   // copy the sorted array
@@ -29,6 +34,9 @@ test ('insertionSortOptimization', async t => {
   t.equal(result, EXPECTED, 'The arr2 should be sorted')
 })
 
+/**
+ * test insertionSortoptimization function with nearly ordered array
+ */
 test('insertionSortOptimization', async t => {
   // copy the sorted array
   const arr3: number[] = SortTestHelper.generateRandomNearlyOrderedArray(100000, 5)
