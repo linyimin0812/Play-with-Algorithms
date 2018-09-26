@@ -1,3 +1,4 @@
+// TODO: 不是使用交换操作,使用复制操作,参考插入排序的实现
 export class MaxHeap {
 
   // The array stores max heap
