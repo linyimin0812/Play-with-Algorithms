@@ -28,6 +28,9 @@
 堆排序
 - [堆排序](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/heap-sort.md)
 
+排序算法总结
+- [排序算法总结](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/sort/sort-summary.md)
+
 
 ### 堆
 
