@@ -36,3 +36,6 @@
 
 #### 最大堆  
 - [最大堆的简单实现](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/heap/max-heap.md)
+
+#### 索引堆
+-[索引堆的实现](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/heap/index-max-heap.md)
