@@ -9,14 +9,13 @@ const ARR = [15, 17, 19, 13, 22, 16, 28, 30, 41, 62]
 test("IndexMaxHeap insert()", async t => {
   const indexMaxHeap = new IndexMaxHeap(ARR.length)
 
-  const EXPECTED = [0, 15, 17, 19, 13, 22, 16, 28, 30, 41, 62, 0, 10, 9, 7, 8, 5, 6, 3, 1, 4, 2]
+  const EXPECTED = [0, 10, 9, 5, 7, 8, 6, 2, 4, 3, 1]
 
   for (let i = 0; i < ARR.length; i++) {
     indexMaxHeap.insert(ARR[i])
   }
-  const result = indexMaxHeap.data.concat(indexMaxHeap.indexes)
 
-  t.deepEqual(result, EXPECTED, 'arr should be satisty the property with max heap')
+  t.deepEqual(indexMaxHeap.indexes, EXPECTED, 'arr should be satisty the property with max heap')
 })
 
 /**

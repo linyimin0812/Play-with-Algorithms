@@ -52,7 +52,7 @@ export class IndexMaxHeap {
    * Get the maximum element in index max heap
    */
   public extractMax(): number {
-    const result = this.__data[this.__count]
+    const result = this.__data[this.__indexes[1]]
     this.__swap(1, this.__count)
     this.__count -= 1
     this.__shiftDown(1)
