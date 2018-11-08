@@ -39,3 +39,12 @@
 
 #### 索引堆
 - [索引堆的实现](https://github.com/linyimin-bupt/algorithm-learning/blob/master/docs/typescript/heap/index-max-heap.md)
+
+#### 和堆相关的问题
+
+1. 在N个元素中选出前M个元素(时间复杂度： N * logM)
+2. 多路归并排序(归并的过程中使用堆来实现)
+3. d叉堆
+4. 最大最小队列(既能找到最大的元素又能找到最小的元素)
+
+思想： 同时维护一个最大堆和一个最小堆
