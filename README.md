@@ -42,7 +42,7 @@
 
 #### 和堆相关的问题
 
-1. 在N个元素中选出前M个元素(时间复杂度： N * logM)
+1. 在N个元素中选出前M个元素(时间复杂度： N * logM)[Implement](src/typescript/heap/practice/find-the-bottom-M-elements-of-N-elements.ts)
 2. 多路归并排序(归并的过程中使用堆来实现)
 3. d叉堆
 4. 最大最小队列(既能找到最大的元素又能找到最小的元素)
