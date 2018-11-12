@@ -51,3 +51,7 @@
 4. 最大最小队列(既能找到最大的元素又能找到最小的元素)
 
 思想： 同时维护一个最大堆和一个最小堆
+
+### 二叉搜索树(Binary Search Tree)
+
+- [二分查找的实现](docs/typescript/binary-search/bianry-search.md)
