@@ -34,3 +34,26 @@ function binarySearch (arr: number[], target: number): number {
     return -1
   }
 ```
+
+**递归代码实现**
+
+```ts
+ function binarySearchImplementWithRecursive (arr: number[], target: number): number {
+    return __compare(arr, 0, arr.length - 1, target)
+  }
+
+  function __compare (arr: number[], l: number, r: number, target:number): number {
+    if (l > r) {
+      return -1
+    }
+    let mid = l + Math.floor((r - l)/2)
+    if (target === arr[mid]) {
+      return mid
+    }
+    if (target > arr[mid]) {
+      return __compare(arr, mid+1, r, target)
+    }
+
+    return __compare(arr, l, mid-1, target)
+  }
+```
