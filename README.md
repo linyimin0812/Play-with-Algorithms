@@ -54,4 +54,4 @@
 
 ### 二叉搜索树(Binary Search Tree)
 
-- [二分查找的实现](docs/typescript/binary-search/bianry-search.md)
+- [二分查找的实现](docs/typescript/binary-search-tree/bianry-search.md)
