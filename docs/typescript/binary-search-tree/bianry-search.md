@@ -57,3 +57,14 @@ function binarySearch (arr: number[], target: number): number {
     return __compare(arr, l, mid-1, target)
   }
 ```
+
+## 二分查找的变种
+
+- floor函数
+
+目标元素在数组中第一次出现的位置
+- ceil函数
+
+目标元素在数组中最后一次出现的位置
+
+当目标元素不存在时：[](http://linyimin-blog.oss-cn-beijing.aliyuncs.com/cjoeggf9j0001wqkh2rrod5na.png)
