@@ -41,4 +41,20 @@ export class BST {
     return root
   }
   
+  public has(key: string): boolean {
+    return this.__has(this.root, key)
+  }
+  
+  private __has(node: Node | null, key: string): boolean {
+    if (node === null) {
+      return false
+    }
+    if (node.key === key) {
+      return false
+    }
+    if (node.key > key) {
+      return this.__has(node.left, key)
+    }
+    return this.__has(node.right, key)
+  }
 }
