@@ -57,4 +57,21 @@ export class BST {
     }
     return this.__has(node.right, key)
   }
+  
+  public search(key: string): string | null {
+    return this.__search(this.root, key)
+  }
+  
+  private __search(node: Node | null, key: string): string | null {
+    if (node === null) {
+      return null
+    }
+    if (node.key === key) {
+      return node.value
+    }
+    if (node.key > key) {
+      return this.__search(node.left, key)
+    }
+    return this.__search(node.right, key)
+  }
 }
