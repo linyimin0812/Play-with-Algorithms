@@ -41,6 +41,41 @@ export class BST {
     return root
   }
   
+  public insertNoRecusive(node: Node) {
+    if (this.root === null) {
+      this.root = node
+      this.count++
+      return
+    }
+    let p = this.root
+    while (p !== null) {
+      if (p.key === node.key) {
+        p.value = node.value
+        return
+      }
+      if (p.key > node.key) {
+        if (p.left !== null) {
+          p = p.left
+          continue
+        }
+        break
+      }
+      if (p.key < node.key) {
+        if (p.right !== null) {
+          p = p.right
+          continue
+        }
+        break
+      }
+    }
+    if (p.key > node.key) {
+      p.left = node
+    } else {
+      p.right = node
+    }
+    this.count++
+  }
+  
   public has(key: string): boolean {
     return this.__has(this.root, key)
   }
