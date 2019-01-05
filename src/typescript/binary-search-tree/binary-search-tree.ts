@@ -134,4 +134,16 @@ export class BST {
       this.__inOrder(node.right)
     }
   }
+  
+  public postOrder() {
+    this.__postOrder(this.root)
+  }
+  
+  private __postOrder(node: Node | null) {
+    if (node !== null) {
+      this.__postOrder(node.left)
+      this.__postOrder(node.right)
+      console.log(node.value)
+    }
+  }
 }
