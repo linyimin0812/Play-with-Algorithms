@@ -164,4 +164,16 @@ export class BST {
       }
     }
   }
+  
+  public min(): string {
+    if (this.root === null) {
+      throw new Error('BST is empty')
+    }
+    let node = this.root
+    while (node.left) {
+      node = node.left
+    }
+    return node.value
+  }
+  
 }
