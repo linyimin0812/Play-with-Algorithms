@@ -109,4 +109,17 @@ export class BST {
     }
     return this.__search(node.right, key)
   }
+  
+  
+  public preOrder() {
+    this.__preOrder(this.root)
+  }
+  
+  private __preOrder(node: Node | null) {
+    if (node !== null) {
+      console.log(node.value)
+      this.__preOrder(node.left)
+      this.__preOrder(node.right)
+    }
+  }
 }
