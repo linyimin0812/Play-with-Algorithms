@@ -176,4 +176,15 @@ export class BST {
     return node.value
   }
   
+  public max() :string {
+    if (this.root === null) {
+      throw new Error('BST is empty')
+    }
+    let node = this.root
+    while(node.right) {
+      node = node.right
+    }
+    return node.value
+  }
+  
 }
