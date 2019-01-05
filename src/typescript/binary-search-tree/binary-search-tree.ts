@@ -146,4 +146,22 @@ export class BST {
       console.log(node.value)
     }
   }
+  
+  public levelOrder() {
+    const queue = new Array<Node>()
+    if (this.root === null) {
+      return
+    } 
+    queue.push(this.root)
+    while(queue.length > 0) {
+      const node = queue.shift() as Node
+      console.log(node.value)
+      if (node.left) {
+        queue.push(node.left)
+      }
+      if (node.right) {
+        queue.push(node.right)
+      }
+    }
+  }
 }
