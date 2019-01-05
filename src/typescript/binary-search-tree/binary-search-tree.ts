@@ -122,4 +122,16 @@ export class BST {
       this.__preOrder(node.right)
     }
   }
+  
+  public inOrder() {
+    this.__inOrder(this.root)
+  }
+  
+  private __inOrder(node: Node | null) {
+    if (node !== null) {
+      this.__inOrder(node.left)
+      console.log(node.value)
+      this.__inOrder(node.right)
+    }
+  }
 }
