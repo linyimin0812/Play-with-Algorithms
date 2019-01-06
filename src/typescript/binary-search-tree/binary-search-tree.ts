@@ -187,4 +187,21 @@ export class BST {
     return node.value
   }
   
+  public removeMin() {
+    this.root = this.__removeMin(this.root)
+  }
+  
+  private __removeMin(node: Node | null): Node | null {
+    if (!node) {
+      return null
+    }
+    if (node.left === null) {
+      const rightNode = node.right
+      this.count --
+      return rightNode
+    }
+    node.left = this.__removeMin(node.left) as Node
+    return node
+  }
+  
 }
