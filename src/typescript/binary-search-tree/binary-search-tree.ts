@@ -1,8 +1,8 @@
 interface Node {
   key  : string,
   value: string,
-  left : Node,
-  right: Node,
+  left : Node | null,
+  right: Node | null,
 }
 
 export class BST {
@@ -20,7 +20,13 @@ export class BST {
     return this.root === null
   }
   
-  public insert(node: Node) {
+  public insert(key: string, value: string) {
+    const node: Node = {
+      key: key,
+      value: value,
+      left: null,
+      right: null,
+    } 
     this.root = this.__insert(this.root, node)
   }
   
@@ -41,7 +47,13 @@ export class BST {
     return root
   }
   
-  public insertNoRecusive(node: Node) {
+  public insertNoRecusive(key: string, value: string) {
+    const node: Node = {
+      key: key,
+      value: value,
+      left: null,
+      right: null,
+    } 
     if (this.root === null) {
       this.root = node
       this.count++
