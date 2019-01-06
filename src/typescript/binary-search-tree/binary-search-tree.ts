@@ -204,4 +204,21 @@ export class BST {
     return node
   }
   
+  public removeMax() {
+    this.root = this.__removeMax(this.root)
+  }
+  
+  private __removeMax(node: Node | null): Node | null {
+    if (node === null) {
+      return node
+    }
+    if (node.right === null) {
+      const leftNode = node.left
+      this.count--
+      return leftNode
+    } 
+    node.right = this.__removeMax(node.right) as Node
+    return node
+  }
+  
 }
