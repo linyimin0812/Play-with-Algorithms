@@ -30,6 +30,11 @@ export class BST {
     this.root = this.__insert(this.root, node)
   }
   
+  /**
+   * 返回插入节点二叉树的根节点
+   * @param root 
+   * @param node 
+   */
   private __insert(root: Node | null, node: Node): Node {
     if (root === null) {
       this.count++
@@ -202,7 +207,11 @@ export class BST {
   public removeMin() {
     this.root = this.__removeMin(this.root)
   }
-  
+  /**
+   * 删除以node为根的二分搜索树中键值最小的节点
+   * 返回删除节点后新的二分搜索树的根
+   * @param node 
+   */
   private __removeMin(node: Node | null): Node | null {
     if (!node) {
       return null
@@ -220,6 +229,11 @@ export class BST {
     this.root = this.__removeMax(this.root)
   }
   
+  /**
+   * 删除以node为根的二叉树中键值最大的节点
+   * 返回删除节点后新的二叉树搜索树的根
+   * @param node 
+   */
   private __removeMax(node: Node | null): Node | null {
     if (node === null) {
       return node
