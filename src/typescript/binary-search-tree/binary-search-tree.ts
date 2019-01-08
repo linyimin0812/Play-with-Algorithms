@@ -1,3 +1,5 @@
+import { notDeepStrictEqual } from "assert";
+
 interface Node {
   key  : string,
   value: string,
@@ -182,26 +184,24 @@ export class BST {
     }
   }
   
-  public min(): string {
-    if (this.root === null) {
+  public min(node: Node): Node {
+    if (node === null) {
       throw new Error('BST is empty')
     }
-    let node = this.root
     while (node.left) {
       node = node.left
     }
-    return node.value
+    return node
   }
   
-  public max() :string {
-    if (this.root === null) {
+  public max(node: Node) :Node {
+    if (node === null) {
       throw new Error('BST is empty')
     }
-    let node = this.root
     while(node.right) {
       node = node.right
     }
-    return node.value
+    return node
   }
   
   public removeMin() {
@@ -247,4 +247,46 @@ export class BST {
     return node
   }
   
+  /**
+   * 删除键值为key的节点
+   * 返回删除键值为key的节点后新的二叉树的根节点
+   * @param key 
+   */
+  public remove(key: string) {
+    this.root = this.__remove(this.root, key)
+  }
+  
+  private __remove(node: Node | null, key: string): Node | null {
+    if (node === null) {
+      return null
+    }
+    if (node.key > key) {
+      node.left = this.__remove(node.left, key)
+      return node
+    }
+    if (node.key < key) {
+      node.right = this.__remove(node.right, key)
+      return node
+    }
+    
+    if (node.key === key) {
+      // 只有左孩子
+      if (node.right === null) {
+         this.count--
+         return node.left
+      }
+      // 只有右孩子
+      if (node.left === null) {
+        this.count--
+        return node.right
+      }
+      // 左右孩子都存在
+      const successor = this.min(node.right)
+      successor.left = node.left
+      successor.right = this.__removeMin(node.right)
+      this.count--
+      return successor
+    }
+    return null
+  }
 }
