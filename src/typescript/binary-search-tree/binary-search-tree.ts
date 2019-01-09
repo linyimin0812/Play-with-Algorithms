@@ -289,4 +289,29 @@ export class BST {
     }
     return null
   }
+  
+  /**
+   * 前驱节点
+   * @param node 
+   */
+  public predecessor(node: Node): Node | null {
+    let predecessor: Node | null = null
+    if (node.left !== null) {
+      predecessor = this.max(node.left)
+    }
+    return predecessor
+  }
+  
+  /**
+   * 后继节点
+   * @param node 
+   */
+  public succesor(node: Node): Node | null {
+    let successor: Node | null = null
+    if (node.right !== null) {
+      successor = this.max(node.right)
+    }
+    return successor
+  }
+  
 }
