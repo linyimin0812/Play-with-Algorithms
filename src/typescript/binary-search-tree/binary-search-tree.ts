@@ -184,7 +184,11 @@ export class BST {
     }
   }
   
-  public min(node: Node): Node {
+  public  minValue(): string {
+    const minNode = this.min(this.root)
+    return minNode.value
+  }
+  private min(node: Node | null): Node {
     if (node === null) {
       throw new Error('BST is empty')
     }
@@ -194,7 +198,11 @@ export class BST {
     return node
   }
   
-  public max(node: Node) :Node {
+  public macValue(): string | null {
+    const maxNode = this.max(this.root)
+    return maxNode.value
+  }
+  private max(node: Node | null) :Node {
     if (node === null) {
       throw new Error('BST is empty')
     }
