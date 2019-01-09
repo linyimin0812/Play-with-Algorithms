@@ -302,7 +302,11 @@ export class BST {
    * 前驱节点
    * @param node 
    */
-  public predecessor(node: Node): Node | null {
+  public predecessor(key: string): Node | null {
+    const node = this.__search(this.root, key)
+    if (node === null) {
+      return null
+    }
     let predecessor: Node | null = null
     if (node.left !== null) {
       predecessor = this.max(node.left)
@@ -314,7 +318,11 @@ export class BST {
    * 后继节点
    * @param node 
    */
-  public succesor(node: Node): Node | null {
+  public succesor(key: string): Node | null {
+    const node = this.__search(this.root, key)
+    if (node === null) {
+      return null
+    }
     let successor: Node | null = null
     if (node.right !== null) {
       successor = this.max(node.right)
