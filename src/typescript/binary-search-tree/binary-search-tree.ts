@@ -198,7 +198,7 @@ export class BST {
     return node
   }
   
-  public macValue(): string | null {
+  public maxValue(): string {
     const maxNode = this.max(this.root)
     return maxNode.value
   }
