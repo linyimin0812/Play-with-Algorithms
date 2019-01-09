@@ -113,15 +113,16 @@ export class BST {
   }
   
   public search(key: string): string | null {
-    return this.__search(this.root, key)
+    const node = this.__search(this.root, key)
+    return node ? node.value : null
   }
   
-  private __search(node: Node | null, key: string): string | null {
+  private __search(node: Node | null, key: string): Node | null {
     if (node === null) {
       return null
     }
     if (node.key === key) {
-      return node.value
+      return node
     }
     if (node.key > key) {
       return this.__search(node.left, key)
