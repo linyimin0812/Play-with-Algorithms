@@ -29,7 +29,21 @@ export class Union {
     return p
   }
   
+  public findOptimitionWithNumberOfNode (p: number): number {
+    return 0
+  }
   
+  public findOptiomitionWithHeightOfSubtree (p: number): number {
+    return 0
+  }
+  
+  public findOptinitionWithPathCompression (p: number): number {
+    return 0
+  }
+  
+  public findOptitionWithRecursive (p: number): number {
+    return 0
+  }
   public isConnected (p: number, q: number): boolean {
     const pRoot = this.find (p)
     const qRoot = this.find (q)
