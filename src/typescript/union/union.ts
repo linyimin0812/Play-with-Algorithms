@@ -55,8 +55,12 @@ export class Union {
     }
   }
   
-  public insertOptimizationWithPathCompression (p: number): number {
-    return 0
+  public findOptimizationWithPathCompression (p: number): number {
+    while (p !== this.parent[p]) {
+      this.parent[p] = this.parent[this.parent[p]]
+      p = this.parent[p]  
+    }
+    return p
   }
   
   public findOptimizationWithRecursive (p: number): number {
