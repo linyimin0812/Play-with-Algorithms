@@ -64,7 +64,10 @@ export class Union {
   }
   
   public findOptimizationWithRecursive (p: number): number {
-    return 0
+    if (p !== this.parent[p]) {
+      this.parent[p] = this.findOptimizationWithRecursive(this.parent[p] )
+    }
+    return this.parent[p]
   }
   public isConnected (p: number, q: number): boolean {
     const pRoot = this.find (p)
