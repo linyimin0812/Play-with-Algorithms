@@ -2,7 +2,7 @@
  * 稠密图的实现
  */
 
-class DenseGraph {
+export class DenseGraph {
   private v: number             // 节点个数
   private e: number             // 边数
   private g: boolean[][]        // 邻接矩阵表示图
@@ -34,7 +34,12 @@ class DenseGraph {
     if (this.g[v][w]) {
       return
     }
-    this.isDirected ? this.g[v][w] = this.g[w][v] = true : this.g[v][w] = true
+    if (this.isDirected) {
+      this.g[v][w] = true
+    } else {
+      this.g[v][w] = this.g[w][v] = true
+    }
+    this.e ++
   }
   
   // 判断两个节点间是否相连
@@ -43,7 +48,7 @@ class DenseGraph {
   }
   
   // 打印整张图
-  public show(g: number[][]) {
+  public show() {
     for (let i = 0; i < this.v; i++) {
       for (let j = 0; j < this.v; j++) {
         console.log(`${i}: ${this.g[i][j]}`)
