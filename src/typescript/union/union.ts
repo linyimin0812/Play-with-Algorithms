@@ -63,6 +63,7 @@ export class Union {
     return p
   }
   
+  // 极致路径压缩,最终秩为2
   public findOptimizationWithRecursive (p: number): number {
     if (p !== this.parent[p]) {
       this.parent[p] = this.findOptimizationWithRecursive(this.parent[p] )
