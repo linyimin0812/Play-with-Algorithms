@@ -40,4 +40,7 @@ test ('hasEged()', async t => {
   
   EXPECTED = denseGraph.hasEdge(0, 2)
   t.equal(false, EXPECTED, '0 and 2 shoule not be connected')
+  
+  EXPECTED = denseGraph.hasEdge(2, 3)
+  t.equal(true, EXPECTED, '0 and 2 shoule not be connected')
 })
