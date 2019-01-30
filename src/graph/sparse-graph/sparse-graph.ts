@@ -6,8 +6,8 @@ export class SparseGraph {
   private v: number
   private e: number
   
-  private g: number[][]
-  private isDirected: boolean
+  protected g         : number[][]
+  private   isDirected: boolean
   
   constructor (v: number, isDirected: boolean) {
     this.v          = v

@@ -3,10 +3,10 @@
  */
 
 export class DenseGraph {
-  private v: number             // 节点个数
-  private e: number             // 边数
-  private g: boolean[][]        // 邻接矩阵表示图
-  private isDirected: boolean   // 是否为有向图
+  private   v         : number       // 节点个数
+  private   e         : number       // 边数
+  protected g         : boolean[][]  // 邻接矩阵表示图
+  private   isDirected: boolean      // 是否为有向图
   
   constructor (n: number, isDirected: boolean) {
     this.v          = n
