@@ -19,6 +19,10 @@ export class DenseGraph {
     }
   }
   
+  public getGraph(): boolean[][] {
+    return this.g
+  }
+  
   // 返回图节点的个数
   public V(): number {
     return this.v

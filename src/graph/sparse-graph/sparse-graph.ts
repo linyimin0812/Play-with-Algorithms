@@ -19,6 +19,10 @@ export class SparseGraph {
     }
   }
   
+  public getGraph (): number[][] {
+    return this.g
+  }
+  
   /**
    * 返回图节点的个数
    */
