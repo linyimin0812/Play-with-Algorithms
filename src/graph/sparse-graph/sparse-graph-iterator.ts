@@ -24,6 +24,6 @@ export class SparseGraphIterator implements AdjIterator {
   }
   
   public end(): boolean {
-    return this.g[this.vertex].length - 1 <= this.index
+    return this.g[this.vertex].length <= this.index
   }
 }
