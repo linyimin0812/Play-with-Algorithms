@@ -12,10 +12,14 @@ export class ConnectedComponent {
   private isVisited: boolean[]
   private graph: DenseGraph | SparseGraph
   
+  // 标识节点属于哪个连通分量
+  private component: number[]
+  
   constructor (graph: DenseGraph| SparseGraph) {
     this.count     = 0
     this.graph     = graph
     this.isVisited = new Array<boolean>(graph.V()).fill(false)
+    this.component = new Array<number> (graph.V()).fill(-1)
     
     for (let i = 0; i < this.graph.V(); i++) {
       if (!this.isVisited[i]) {
@@ -27,6 +31,10 @@ export class ConnectedComponent {
   
   public getResult() {
     return this.count
+  }
+  
+  public isConnected(v: number, w: number): boolean {
+    return (this.component[v] === this.component[w]) && (this.component[v] !== -1)
   }
   /**
    * 深度优先遍历
@@ -40,6 +48,7 @@ export class ConnectedComponent {
       iterator = new SparseGraphIterator(this.graph, vertex)      
     }
     this.isVisited[vertex] = true
+    this.component[vertex] = this.count
     for (let i = iterator.begin(); !iterator.end(); i = iterator.next()) {
       if (!this.isVisited[i]) {
         this.dfs(i)
