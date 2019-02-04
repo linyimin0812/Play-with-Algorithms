@@ -32,6 +32,6 @@ export class DenseGraphIterator implements AdjIterator{
   }
   
   public end(): boolean {
-    return this.index >= this.graph.V() - 1
+    return this.index >= this.graph.V()
   }
 }
