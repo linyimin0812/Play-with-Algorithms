@@ -25,7 +25,6 @@ export class GraphPath {
       stack.push(p)
       p = this.from[p]
     }
-    console.log(stack)
     while (stack.length > 0) {
       result.push(stack.pop()!)
     }
