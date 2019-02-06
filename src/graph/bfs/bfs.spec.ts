@@ -1,5 +1,5 @@
 import test from 'blue-tape'
-import { readGraph } from './read-graph';
+import { readGraph } from '../read-graph';
 import { BFS } from './bfs';
 
 test('bfs()', async t => {

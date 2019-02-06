@@ -1,5 +1,5 @@
 import test                     from 'blue-tape'
-import { readGraph            } from './read-graph'
+import { readGraph            } from '../read-graph'
 import { DirectedAcyclicGraph } from './directed-acyclic-graph'
 
 test('isDAG()', async t => {

@@ -1,7 +1,7 @@
-import { DenseGraph           } from './dense-graph/dense-graph'
-import { SparseGraph          } from './sparse-graph/sparse-graph'
-import { DenseGraphIterator   } from './dense-graph/dense-graph-iterator'
-import { SparseGraphIterator  } from './sparse-graph/sparse-graph-iterator'
+import { DenseGraph           } from '../dense-graph/dense-graph'
+import { SparseGraph          } from '../sparse-graph/sparse-graph'
+import { DenseGraphIterator   } from '../dense-graph/dense-graph-iterator'
+import { SparseGraphIterator  } from '../sparse-graph/sparse-graph-iterator'
 
 /**
  * 获取连通分量的个数

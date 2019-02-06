@@ -1,5 +1,5 @@
 import test from 'blue-tape'
-import { readGraph } from './read-graph';
+import { readGraph } from '../read-graph';
 import { GraphPath } from './path';
 
 test('hasPath()', async t => {

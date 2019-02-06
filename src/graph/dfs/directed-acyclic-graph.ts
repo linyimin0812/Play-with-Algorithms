@@ -1,7 +1,7 @@
-import { DenseGraph           } from './dense-graph/dense-graph'
-import { SparseGraph          } from './sparse-graph/sparse-graph'
-import { DenseGraphIterator   } from './dense-graph/dense-graph-iterator'
-import { SparseGraphIterator  } from './sparse-graph/sparse-graph-iterator'
+import { DenseGraph           } from '../dense-graph/dense-graph'
+import { SparseGraph          } from '../sparse-graph/sparse-graph'
+import { DenseGraphIterator   } from '../dense-graph/dense-graph-iterator'
+import { SparseGraphIterator  } from '../sparse-graph/sparse-graph-iterator'
 
 export class DirectedAcyclicGraph {
   private graph: DenseGraph | SparseGraph
