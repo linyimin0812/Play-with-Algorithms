@@ -5,7 +5,7 @@ import { DenseGraph } from './dense-graph';
 
 
 test('begin()', async t => {
-  const graph = await readGraph('./graph1.txt', 'dense', false) as DenseGraph
+  const graph = await readGraph('./graph-example/graph1.txt', 'dense', false) as DenseGraph
   const adjIterator = new DenseGraphIterator(graph, 0)
   const EXPECTED = 1
   const result = adjIterator.begin()
@@ -13,7 +13,7 @@ test('begin()', async t => {
 })
 
 test('next()', async t => {
-  const graph = await readGraph('./graph1.txt', 'dense', false) as DenseGraph
+  const graph = await readGraph('./graph-example/graph1.txt', 'dense', false) as DenseGraph
   const adjIterator = new DenseGraphIterator(graph, 0)
   const EXPECTED = '1,2,5,-1,'
   let result = ''

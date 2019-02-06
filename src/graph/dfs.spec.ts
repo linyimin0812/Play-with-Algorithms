@@ -3,7 +3,7 @@ import { readGraph } from './read-graph';
 import { DFS } from './dfs';
 
 test('dfs()', async t => {
-  const grap = await readGraph('./graph1.txt', 'sparse')
+  const grap = await readGraph('./graph-example/graph1.txt', 'sparse')
   const dfs  = new DFS(grap)
   const EXPECTED = '0 1 2 3 4 5 '
   dfs.dfs(0)
@@ -11,7 +11,7 @@ test('dfs()', async t => {
 })
 
 test('dfs()', async t => {
-  const grap = await readGraph('./graph1.txt', 'sparse')
+  const grap = await readGraph('./graph-example/graph1.txt', 'sparse')
   const dfs  = new DFS(grap)
   const EXPECTED = '1 0 2 5 3 4 '
   dfs.dfs(1)

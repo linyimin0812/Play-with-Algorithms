@@ -3,7 +3,7 @@ import { readGraph } from './read-graph';
 import { GraphPath } from './path';
 
 test('hasPath()', async t => {
-  const graph = await readGraph('./graph1.txt', 'sparse')
+  const graph = await readGraph('./graph-example/graph1.txt', 'sparse')
   
   const pathGraph = new GraphPath(graph, 0)
   
@@ -11,7 +11,7 @@ test('hasPath()', async t => {
 })
 
 test('path()', async t => {
-  const graph = await readGraph('./graph1.txt', 'sparse')
+  const graph = await readGraph('./graph-example/graph1.txt', 'sparse')
   
   const pathGraph = new GraphPath(graph, 0)
   

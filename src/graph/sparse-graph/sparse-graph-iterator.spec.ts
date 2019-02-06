@@ -5,7 +5,7 @@ import { SparseGraph } from './sparse-graph';
 
 
 test('begin()', async t => {
-  const graph = await readGraph('./graph1.txt', 'sparse', false) as SparseGraph
+  const graph = await readGraph('./graph-example/graph1.txt', 'sparse', false) as SparseGraph
   const adjIterator = new SparseGraphIterator(graph, 0)
   const EXPECTED = 1
   const result = adjIterator.begin()
@@ -13,7 +13,7 @@ test('begin()', async t => {
 })
 
 test('next()', async t => {
-  const graph = await readGraph('./graph1.txt', 'sparse', false) as SparseGraph
+  const graph = await readGraph('./graph-example/graph1.txt', 'sparse', false) as SparseGraph
   const adjIterator = new SparseGraphIterator(graph, 0)
   const EXPECTED = '1,2,5,-1,'
   let result = ''
