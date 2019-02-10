@@ -1,7 +1,7 @@
-import test from 'blue-tape'
-import { readGraph } from '../read-graph';
-import { DenseGraphIterator } from './dense-graph-iterator';
-import { DenseGraph } from './dense-graph';
+import test                   from 'blue-tape'
+import { readGraph          } from '../read-graph'
+import { DenseGraphIterator } from './dense-graph-iterator'
+import { DenseGraph         } from './dense-graph'
 
 test('dense-graph-iterator', async t => {
   const graph = await readGraph('./graph-example/graph1.txt', 'dense')
