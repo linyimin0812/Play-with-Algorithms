@@ -149,9 +149,4 @@ public class SortHelper {
         }
         System.out.println(sb.toString());
     }
-
-
-    public static void main(String[] args) {
-        print(generateRandomArray(1000, 0, 100));
-    }
 }
