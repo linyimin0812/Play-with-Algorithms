@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16a08b7a-cbad-4331-82fe-776b12fdc16c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/binary-search-tree/binary-search-tree.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/binary-search-tree/binary-search-tree.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/binary-search-tree/binary-search.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/binary-search-tree/binary-search.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/bfs/bfs-shortest-path.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/bfs/bfs-shortest-path.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/bfs/bfs.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/bfs/bfs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dense-graph/dense-graph-iterator.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dense-graph/dense-graph-iterator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dense-graph/dense-graph.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dense-graph/dense-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/connected-component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/connected-component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/dfs.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/dfs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/directed-acyclic-graph.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/directed-acyclic-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/path.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/dfs/path.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/graph-example/connected-component-graph.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/graph-example/graph1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/graph-example/graph2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/graph-example/graph3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/iterator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/read-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/sparse-graph/sparse-graph-iterator.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/sparse-graph/sparse-graph-iterator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/unweighted-graph/sparse-graph/sparse-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/dense-graph/dense-graph-iterator.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/dense-graph/dense-graph-iterator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/dense-graph/dense-graph.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/dense-graph/dense-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/edge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/graph-example/graph1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/iterator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/read-graph.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/read-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/sparse-graph/sparse-graph-iterator.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/sparse-graph/sparse-graph-iterator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/sparse-graph/sparse-graph.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/graph/weighted-graph/sparse-graph/sparse-graph.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/heap/index-max-heap.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/heap/index-max-heap.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/heap/max-heap.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/heap/max-heap.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/heap/practice/find-the-bottom-M-elements-of-N-elements.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/heap/practice/find-the-bottom-M-elements-of-N-elements.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/bubble/bubble-sort.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/bubble/bubble-sort.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/heap-sort/heap-sort.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/heap-sort/heap-sort.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/insertion/insertion-sort.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/insertion/insertion-sort.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/merge/merge-sort-iteration.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/merge/merge-sort-iteration.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/merge/merge-sort-recursion.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/merge/merge-sort-recursion.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/quick/quick-sort.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/quick/quick-sort.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/selection/selection-sort.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/selection/selection-sort.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/shell/shell-sort.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sort/shell/shell-sort.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/union/simple-union.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/union/union.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/util/sort/sort-test-helper.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/util/sort/sort-test-helper.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tslint.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="22HYQVNQ09WXRsZo3a67HmHv8eF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="club.linyimin.algorithm.Main" />
+      <module name="java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="club.linyimin.algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16a08b7a-cbad-4331-82fe-776b12fdc16c" name="Default Changelist" comment="" />
+      <created>1639495964023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639495964023</updated>
+      <workItem from="1639495965130" duration="223000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
