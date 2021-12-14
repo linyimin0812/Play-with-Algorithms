@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16a08b7a-cbad-4331-82fe-776b12fdc16c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/binary-search-tree/binary-search-tree.spec.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/binary-search-tree/binary-search-tree.ts" beforeDir="false" />
@@ -103,6 +104,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -144,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639495964023</updated>
-      <workItem from="1639495965130" duration="223000" />
+      <workItem from="1639495965130" duration="1461000" />
     </task>
     <servers />
   </component>
