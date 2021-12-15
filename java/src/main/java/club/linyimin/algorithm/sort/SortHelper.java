@@ -1,4 +1,6 @@
-package club.linyimin.algorithm.helper.sort;
+package club.linyimin.algorithm.sort;
+
+import sun.jvm.hotspot.utilities.Assert;
 
 /**
  * @author yiminlin
@@ -148,5 +150,16 @@ public class SortHelper {
             sb.append(v).append(" ");
         }
         System.out.println(sb.toString());
+    }
+
+    public static void testComplexity(Sort sort, int[] arr) {
+        long start = System.currentTimeMillis();
+        int[] sortedArr = sort.sort(arr);
+        long end = System.currentTimeMillis();
+        boolean isSorted = isSorted(sortedArr);
+
+        Assert.that(isSorted, "the result of " + sort.getClass().getName() + " is not in order.");
+
+        System.out.println(sort.getClass().getName() + " cost is " + (end - start) + "ms" + "array lenght is " + arr.length);
     }
 }
