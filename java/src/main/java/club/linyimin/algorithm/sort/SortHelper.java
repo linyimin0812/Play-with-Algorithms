@@ -158,8 +158,8 @@ public class SortHelper {
         long end = System.currentTimeMillis();
         boolean isSorted = isSorted(sortedArr);
 
-        Assert.that(isSorted, "the result of " + sort.getClass().getName() + " is not in order.");
+        Assert.that(isSorted, "the result of " + sort.getClass().getSimpleName() + " is not in order.");
 
-        System.out.println(sort.getClass().getName() + " cost is " + (end - start) + "ms" + "array lenght is " + arr.length);
+        System.out.println(sort.getClass().getSimpleName() + " cost is " + (end - start) + "ms, " + "array lenght is " + arr.length);
     }
 }
